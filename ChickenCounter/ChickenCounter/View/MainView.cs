@@ -12,9 +12,10 @@ namespace ChickenCounter
 {
     public partial class MainView : Form
     {
-        public MainView()
+        public MainView(string UserName)
         {
             InitializeComponent();
+            lbUserName.Text = UserName;
         }
 
         private void addVendorToolStripMenuItem_Click(object sender, EventArgs e)

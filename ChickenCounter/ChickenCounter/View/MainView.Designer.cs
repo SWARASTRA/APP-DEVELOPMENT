@@ -51,13 +51,15 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ucPurchaseTxn1 = new ChickenCounter.ucPurchaseTxn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbUserName = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
@@ -66,7 +68,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(864, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(864, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,26 +79,26 @@
             this.mToolStripMenuItem,
             this.stockToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(105, 25);
             this.fileToolStripMenuItem.Text = "Transaction";
             // 
             // addVendorToolStripMenuItem
             // 
             this.addVendorToolStripMenuItem.Name = "addVendorToolStripMenuItem";
-            this.addVendorToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.addVendorToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.addVendorToolStripMenuItem.Text = "Purchase";
             this.addVendorToolStripMenuItem.Click += new System.EventHandler(this.purchaseTxn_Click);
             // 
             // mToolStripMenuItem
             // 
             this.mToolStripMenuItem.Name = "mToolStripMenuItem";
-            this.mToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.mToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.mToolStripMenuItem.Text = "Sell";
             // 
             // stockToolStripMenuItem
             // 
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.stockToolStripMenuItem.Text = "Stock";
             // 
             // editToolStripMenuItem
@@ -106,25 +108,25 @@
             this.editToolStripMenuItem1,
             this.deleteToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
             this.editToolStripMenuItem.Text = "Vendor";
             // 
             // addNewToolStripMenuItem
             // 
             this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
-            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.addNewToolStripMenuItem.Text = "Add New";
             // 
             // editToolStripMenuItem1
             // 
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(148, 26);
             this.editToolStripMenuItem1.Text = "Edit";
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // viewToolStripMenuItem
@@ -133,7 +135,7 @@
             this.dailyReportToolStripMenuItem,
             this.monthlyReportToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(73, 25);
             this.viewToolStripMenuItem.Text = "Report";
             // 
             // dailyReportToolStripMenuItem
@@ -143,25 +145,25 @@
             this.weeklyReportToolStripMenuItem,
             this.monthlyReportToolStripMenuItem1});
             this.dailyReportToolStripMenuItem.Name = "dailyReportToolStripMenuItem";
-            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.dailyReportToolStripMenuItem.Text = "Purchase";
             // 
             // dailyReportToolStripMenuItem1
             // 
             this.dailyReportToolStripMenuItem1.Name = "dailyReportToolStripMenuItem1";
-            this.dailyReportToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
+            this.dailyReportToolStripMenuItem1.Size = new System.Drawing.Size(196, 26);
             this.dailyReportToolStripMenuItem1.Text = "Daily Report";
             // 
             // weeklyReportToolStripMenuItem
             // 
             this.weeklyReportToolStripMenuItem.Name = "weeklyReportToolStripMenuItem";
-            this.weeklyReportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.weeklyReportToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.weeklyReportToolStripMenuItem.Text = "Weekly Report";
             // 
             // monthlyReportToolStripMenuItem1
             // 
             this.monthlyReportToolStripMenuItem1.Name = "monthlyReportToolStripMenuItem1";
-            this.monthlyReportToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
+            this.monthlyReportToolStripMenuItem1.Size = new System.Drawing.Size(196, 26);
             this.monthlyReportToolStripMenuItem1.Text = "Monthly Report";
             // 
             // monthlyReportToolStripMenuItem
@@ -171,31 +173,31 @@
             this.monthlyReportToolStripMenuItem2,
             this.monthlyReportToolStripMenuItem3});
             this.monthlyReportToolStripMenuItem.Name = "monthlyReportToolStripMenuItem";
-            this.monthlyReportToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.monthlyReportToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.monthlyReportToolStripMenuItem.Text = "Sell";
             // 
             // dailyReportToolStripMenuItem2
             // 
             this.dailyReportToolStripMenuItem2.Name = "dailyReportToolStripMenuItem2";
-            this.dailyReportToolStripMenuItem2.Size = new System.Drawing.Size(157, 22);
+            this.dailyReportToolStripMenuItem2.Size = new System.Drawing.Size(196, 26);
             this.dailyReportToolStripMenuItem2.Text = "Daily Report";
             // 
             // monthlyReportToolStripMenuItem2
             // 
             this.monthlyReportToolStripMenuItem2.Name = "monthlyReportToolStripMenuItem2";
-            this.monthlyReportToolStripMenuItem2.Size = new System.Drawing.Size(157, 22);
+            this.monthlyReportToolStripMenuItem2.Size = new System.Drawing.Size(196, 26);
             this.monthlyReportToolStripMenuItem2.Text = "Weekly Report";
             // 
             // monthlyReportToolStripMenuItem3
             // 
             this.monthlyReportToolStripMenuItem3.Name = "monthlyReportToolStripMenuItem3";
-            this.monthlyReportToolStripMenuItem3.Size = new System.Drawing.Size(157, 22);
+            this.monthlyReportToolStripMenuItem3.Size = new System.Drawing.Size(196, 26);
             this.monthlyReportToolStripMenuItem3.Text = "Monthly Report";
             // 
             // settingToolStripMenuItem
             // 
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
             this.settingToolStripMenuItem.Text = "Setting";
             // 
             // helpToolStripMenuItem
@@ -203,13 +205,13 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(57, 25);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(126, 26);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // label1
@@ -237,12 +239,29 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Salipur, Cuttack";
             // 
-            // ucPurchaseTxn1
+            // label3
             // 
-            this.ucPurchaseTxn1.Location = new System.Drawing.Point(12, 49);
-            this.ucPurchaseTxn1.Name = "ucPurchaseTxn1";
-            this.ucPurchaseTxn1.Size = new System.Drawing.Size(535, 207);
-            this.ucPurchaseTxn1.TabIndex = 3;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Green;
+            this.label3.Location = new System.Drawing.Point(562, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Login As : ";
+            // 
+            // lbUserName
+            // 
+            this.lbUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbUserName.AutoSize = true;
+            this.lbUserName.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserName.ForeColor = System.Drawing.Color.Red;
+            this.lbUserName.Location = new System.Drawing.Point(658, 69);
+            this.lbUserName.Name = "lbUserName";
+            this.lbUserName.Size = new System.Drawing.Size(112, 25);
+            this.lbUserName.TabIndex = 4;
+            this.lbUserName.Text = "_UserName";
             // 
             // MainView
             // 
@@ -250,7 +269,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(864, 516);
-            this.Controls.Add(this.ucPurchaseTxn1);
+            this.Controls.Add(this.lbUserName);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -289,7 +309,8 @@
         private System.Windows.Forms.ToolStripMenuItem monthlyReportToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem monthlyReportToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private ucPurchaseTxn ucPurchaseTxn1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbUserName;
     }
 }
 
