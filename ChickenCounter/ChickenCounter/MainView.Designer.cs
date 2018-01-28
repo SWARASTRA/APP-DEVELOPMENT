@@ -32,25 +32,25 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addVendorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dailyReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.monthlyReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dailyReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.weeklyReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthlyReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.monthlyReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dailyReportToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.monthlyReportToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.monthlyReportToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.ucPurchaseTxn1 = new ChickenCounter.ucPurchaseTxn();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +92,12 @@
             this.mToolStripMenuItem.Name = "mToolStripMenuItem";
             this.mToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.mToolStripMenuItem.Text = "Sell";
+            // 
+            // stockToolStripMenuItem
+            // 
+            this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.stockToolStripMenuItem.Text = "Stock";
             // 
             // editToolStripMenuItem
             // 
@@ -140,65 +146,6 @@
             this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.dailyReportToolStripMenuItem.Text = "Purchase";
             // 
-            // monthlyReportToolStripMenuItem
-            // 
-            this.monthlyReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dailyReportToolStripMenuItem2,
-            this.monthlyReportToolStripMenuItem2,
-            this.monthlyReportToolStripMenuItem3});
-            this.monthlyReportToolStripMenuItem.Name = "monthlyReportToolStripMenuItem";
-            this.monthlyReportToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.monthlyReportToolStripMenuItem.Text = "Sell";
-            // 
-            // settingToolStripMenuItem
-            // 
-            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.settingToolStripMenuItem.Text = "Setting";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Castellar", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(522, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Raju Chicken Counter";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(707, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Salipur, Cuttack";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // stockToolStripMenuItem
-            // 
-            this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.stockToolStripMenuItem.Text = "Stock";
-            // 
             // dailyReportToolStripMenuItem1
             // 
             this.dailyReportToolStripMenuItem1.Name = "dailyReportToolStripMenuItem1";
@@ -217,6 +164,16 @@
             this.monthlyReportToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
             this.monthlyReportToolStripMenuItem1.Text = "Monthly Report";
             // 
+            // monthlyReportToolStripMenuItem
+            // 
+            this.monthlyReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dailyReportToolStripMenuItem2,
+            this.monthlyReportToolStripMenuItem2,
+            this.monthlyReportToolStripMenuItem3});
+            this.monthlyReportToolStripMenuItem.Name = "monthlyReportToolStripMenuItem";
+            this.monthlyReportToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.monthlyReportToolStripMenuItem.Text = "Sell";
+            // 
             // dailyReportToolStripMenuItem2
             // 
             this.dailyReportToolStripMenuItem2.Name = "dailyReportToolStripMenuItem2";
@@ -234,6 +191,51 @@
             this.monthlyReportToolStripMenuItem3.Name = "monthlyReportToolStripMenuItem3";
             this.monthlyReportToolStripMenuItem3.Size = new System.Drawing.Size(157, 22);
             this.monthlyReportToolStripMenuItem3.Text = "Monthly Report";
+            // 
+            // settingToolStripMenuItem
+            // 
+            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.settingToolStripMenuItem.Text = "Setting";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(449, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(415, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Raju Chicken Counter";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
+            this.label2.Location = new System.Drawing.Point(662, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 29);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Salipur, Cuttack";
             // 
             // ucPurchaseTxn1
             // 
