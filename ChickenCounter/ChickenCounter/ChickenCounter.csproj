@@ -81,6 +81,12 @@
     <Compile Include="VendorTransaction.cs">
       <DependentUpon>MyShopDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\AddVendorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddVendorForm.Designer.cs">
+      <DependentUpon>AddVendorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="User Controls\ucPurchaseTxn.Designer.cs">
       <DependentUpon>ucPurchaseTxn.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AddVendorForm.resx">
+      <DependentUpon>AddVendorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>

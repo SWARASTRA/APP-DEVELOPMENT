@@ -116,6 +116,7 @@
             this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
             this.addNewToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.addNewToolStripMenuItem.Text = "Add New";
+            this.addNewToolStripMenuItem.Click += new System.EventHandler(this.addNewToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem1
             // 
@@ -145,7 +146,7 @@
             this.weeklyReportToolStripMenuItem,
             this.monthlyReportToolStripMenuItem1});
             this.dailyReportToolStripMenuItem.Name = "dailyReportToolStripMenuItem";
-            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.dailyReportToolStripMenuItem.Text = "Purchase";
             // 
             // dailyReportToolStripMenuItem1
@@ -173,7 +174,7 @@
             this.monthlyReportToolStripMenuItem2,
             this.monthlyReportToolStripMenuItem3});
             this.monthlyReportToolStripMenuItem.Name = "monthlyReportToolStripMenuItem";
-            this.monthlyReportToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.monthlyReportToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.monthlyReportToolStripMenuItem.Text = "Sell";
             // 
             // dailyReportToolStripMenuItem2
@@ -211,7 +212,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(126, 26);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // label1

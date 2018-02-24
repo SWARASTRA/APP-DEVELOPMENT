@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChickenCounter.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,12 @@ namespace ChickenCounter
 
         private void purchaseTxn_Click(object sender, EventArgs e)
         {
+        }
+
+        private void addNewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddVendorForm addVendor = new View.AddVendorForm();
+            addVendor.ShowDialog();
         }
     }
 }
