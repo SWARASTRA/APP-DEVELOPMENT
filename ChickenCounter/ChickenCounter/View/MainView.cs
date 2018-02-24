@@ -16,6 +16,7 @@ namespace ChickenCounter
         {
             InitializeComponent();
             lbUserName.Text = UserName;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void addVendorToolStripMenuItem_Click(object sender, EventArgs e)

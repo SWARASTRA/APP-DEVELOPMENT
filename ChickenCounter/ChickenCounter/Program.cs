@@ -16,7 +16,12 @@ namespace ChickenCounter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View.LogIn());
+            View.LogIn _login = new View.LogIn();
+            Application.Run(_login);
+            if(_login.IsSucessfull)
+            {
+                Application.Run(new MainView(_login.FirstName + " "+_login.LastName));
+            }
         }
     }
 }

@@ -16,18 +16,21 @@ namespace ChickenCounter.View
         {
             InitializeComponent();
         }
-        
+
+        public bool IsSucessfull { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             using (MyShopDB_Entities mse = new MyShopDB_Entities())
             {
                 Login _login = mse.Logins.Where(x => x.UserName.ToString().ToUpper() == txtUserName.Text.ToString().ToUpper()).FirstOrDefault();
-                if (_login.Password==txtPassword.Text)
+                IsSucessfull = (_login.Password == txtPassword.Text);
+                if (IsSucessfull)
                 {
-                    MainView mv = new MainView((_login.FirstName +" "+ _login.LastName).ToString());
-                    mv.Show();
-                    mv.WindowState = FormWindowState.Maximized;
-                    
+                    FirstName = _login.FirstName;
+                    LastName = _login.LastName;
+                    this.Close();
                 }
                 else
                 {
