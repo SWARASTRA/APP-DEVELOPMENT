@@ -4,8 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b014af71080640a0889b864e37da8a52" Name="Diagram1">
-        <EntityTypeShape EntityType="MyShopDBModel.Login" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="4c3a26b8dbc6412ab9d404dba54cfc4f" Name="Diagram1">
+        <EntityTypeShape EntityType="MyShopDB_Model.Login" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyShopDB_Model.Vendor" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyShopDB_Model.VendorTransaction" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="MyShopDB_Model.FK_Vendor_Login" ManuallyRouted="false" />
+        <AssociationConnector Association="MyShopDB_Model.FK_VendorTransaction_Login" ManuallyRouted="false" />
+        <AssociationConnector Association="MyShopDB_Model.FK_VendorTransaction_Vendor" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

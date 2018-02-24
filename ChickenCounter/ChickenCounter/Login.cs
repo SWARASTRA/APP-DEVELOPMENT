@@ -14,10 +14,22 @@ namespace ChickenCounter
     
     public partial class Login
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Login()
+        {
+            this.Vendors = new HashSet<Vendor>();
+            this.VendorTransactions = new HashSet<VendorTransaction>();
+        }
+    
         public int PersonID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Vendor> Vendors { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VendorTransaction> VendorTransactions { get; set; }
     }
 }

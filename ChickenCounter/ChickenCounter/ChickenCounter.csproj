@@ -75,6 +75,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyShopDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Vendor.cs">
+      <DependentUpon>MyShopDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VendorTransaction.cs">
+      <DependentUpon>MyShopDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
