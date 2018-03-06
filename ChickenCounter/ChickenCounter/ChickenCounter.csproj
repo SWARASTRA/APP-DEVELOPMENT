@@ -75,6 +75,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyShopDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\ucVendorSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucVendorSearch.Designer.cs">
+      <DependentUpon>ucVendorSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vendor.cs">
       <DependentUpon>MyShopDB.tt</DependentUpon>
     </Compile>
@@ -107,6 +113,15 @@
     <Compile Include="User Controls\ucPurchaseTxn.Designer.cs">
       <DependentUpon>ucPurchaseTxn.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\SellTxnEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SellTxnEntry.Designer.cs">
+      <DependentUpon>SellTxnEntry.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="User Controls\ucVendorSearch.resx">
+      <DependentUpon>ucVendorSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AddVendorForm.resx">
       <DependentUpon>AddVendorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +142,9 @@
     </Compile>
     <EmbeddedResource Include="User Controls\ucPurchaseTxn.resx">
       <DependentUpon>ucPurchaseTxn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SellTxnEntry.resx">
+      <DependentUpon>SellTxnEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="MyShopDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

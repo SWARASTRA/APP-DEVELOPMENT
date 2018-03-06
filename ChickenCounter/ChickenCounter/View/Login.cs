@@ -15,11 +15,16 @@ namespace ChickenCounter.View
         public LogIn()
         {
             InitializeComponent();
+            if(txtUserName.Text !=string.Empty && txtPassword.Text!=string.Empty)
+            {
+                btnSignIn.Enabled = true;
+            }
         }
 
         public bool IsSucessfull { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             using (MyShopDB_Entities mse = new MyShopDB_Entities())

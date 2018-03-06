@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace ChickenCounter.View
 {
-    public partial class AddVendorForm : Form
+    public partial class SellTxnEntry : Form
     {
-        public AddVendorForm()
+        public SellTxnEntry()
         {
             InitializeComponent();
         }
 
-        private void labelFirstName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxFirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonSubmit_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

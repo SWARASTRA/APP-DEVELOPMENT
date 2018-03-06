@@ -42,81 +42,94 @@
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
+            this.labelFirstName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.labelFirstName.Location = new System.Drawing.Point(13, 22);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(57, 13);
+            this.labelFirstName.Size = new System.Drawing.Size(96, 21);
             this.labelFirstName.TabIndex = 0;
-            this.labelFirstName.Text = "First Name";
+            this.labelFirstName.Text = "First Name :";
+            this.labelFirstName.Click += new System.EventHandler(this.labelFirstName_Click);
             // 
             // labelLastName
             // 
             this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(13, 67);
+            this.labelLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.labelLastName.Location = new System.Drawing.Point(238, 22);
             this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(58, 13);
+            this.labelLastName.Size = new System.Drawing.Size(94, 21);
             this.labelLastName.TabIndex = 1;
-            this.labelLastName.Text = "Last Name";
+            this.labelLastName.Text = "Last Name :";
             // 
             // labelMobileNumber
             // 
             this.labelMobileNumber.AutoSize = true;
-            this.labelMobileNumber.Location = new System.Drawing.Point(13, 115);
+            this.labelMobileNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.labelMobileNumber.Location = new System.Drawing.Point(507, 22);
             this.labelMobileNumber.Name = "labelMobileNumber";
-            this.labelMobileNumber.Size = new System.Drawing.Size(78, 13);
+            this.labelMobileNumber.Size = new System.Drawing.Size(134, 21);
             this.labelMobileNumber.TabIndex = 2;
-            this.labelMobileNumber.Text = "Mobile Number";
+            this.labelMobileNumber.Text = "Mobile Number :";
             // 
             // labelCreditLimit
             // 
             this.labelCreditLimit.AutoSize = true;
-            this.labelCreditLimit.Location = new System.Drawing.Point(13, 165);
+            this.labelCreditLimit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.labelCreditLimit.Location = new System.Drawing.Point(796, 21);
             this.labelCreditLimit.Name = "labelCreditLimit";
-            this.labelCreditLimit.Size = new System.Drawing.Size(58, 13);
+            this.labelCreditLimit.Size = new System.Drawing.Size(103, 21);
             this.labelCreditLimit.TabIndex = 3;
-            this.labelCreditLimit.Text = "Credit Limit";
+            this.labelCreditLimit.Text = "Credit Limit :";
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(97, 22);
+            this.textBoxFirstName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.textBoxFirstName.Location = new System.Drawing.Point(107, 19);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFirstName.Size = new System.Drawing.Size(130, 29);
             this.textBoxFirstName.TabIndex = 4;
+            this.textBoxFirstName.TextChanged += new System.EventHandler(this.textBoxFirstName_TextChanged);
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(97, 67);
+            this.textBoxLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.textBoxLastName.Location = new System.Drawing.Point(338, 17);
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLastName.Size = new System.Drawing.Size(156, 29);
             this.textBoxLastName.TabIndex = 5;
             // 
             // textBoxMobileNumber
             // 
-            this.textBoxMobileNumber.Location = new System.Drawing.Point(97, 115);
+            this.textBoxMobileNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.textBoxMobileNumber.Location = new System.Drawing.Point(639, 19);
             this.textBoxMobileNumber.Name = "textBoxMobileNumber";
-            this.textBoxMobileNumber.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMobileNumber.Size = new System.Drawing.Size(153, 29);
             this.textBoxMobileNumber.TabIndex = 6;
             // 
             // textBoxCreditLimit
             // 
-            this.textBoxCreditLimit.Location = new System.Drawing.Point(97, 165);
+            this.textBoxCreditLimit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.textBoxCreditLimit.Location = new System.Drawing.Point(905, 21);
             this.textBoxCreditLimit.Name = "textBoxCreditLimit";
-            this.textBoxCreditLimit.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCreditLimit.Size = new System.Drawing.Size(133, 29);
             this.textBoxCreditLimit.TabIndex = 7;
             // 
             // buttonSubmit
             // 
-            this.buttonSubmit.Location = new System.Drawing.Point(16, 226);
+            this.buttonSubmit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonSubmit.Location = new System.Drawing.Point(1057, 18);
             this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(75, 23);
+            this.buttonSubmit.Size = new System.Drawing.Size(75, 29);
             this.buttonSubmit.TabIndex = 8;
             this.buttonSubmit.Text = "Submit";
             this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // AddVendorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1186, 74);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.textBoxCreditLimit);
             this.Controls.Add(this.textBoxMobileNumber);
@@ -126,6 +139,8 @@
             this.Controls.Add(this.labelMobileNumber);
             this.Controls.Add(this.labelLastName);
             this.Controls.Add(this.labelFirstName);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddVendorForm";
             this.Text = "AddVendorForm";
             this.ResumeLayout(false);
