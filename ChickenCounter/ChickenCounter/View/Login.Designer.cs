@@ -34,6 +34,7 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -97,6 +98,17 @@
             this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(36, 152);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(60, 17);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Default";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,6 +116,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(505, 247);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.txtUserName);
@@ -127,5 +140,6 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

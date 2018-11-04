@@ -28,14 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgVendor = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtLName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,72 +37,21 @@
             this.txtFName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtVendorID = new System.Windows.Forms.TextBox();
+            this.dgVendor = new System.Windows.Forms.DataGridView();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgVendor)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgVendor
+            // btn_Search
             // 
-            this.dgVendor.AllowUserToAddRows = false;
-            this.dgVendor.AllowUserToDeleteRows = false;
-            this.dgVendor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dgVendor.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dgVendor.Location = new System.Drawing.Point(6, 43);
-            this.dgVendor.Name = "dgVendor";
-            this.dgVendor.ReadOnly = true;
-            this.dgVendor.Size = new System.Drawing.Size(798, 158);
-            this.dgVendor.TabIndex = 19;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Select";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Vendor ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "First Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Last Name";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = " Mobile Number";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "OutStanding Credit Limit";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(729, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_Search.Location = new System.Drawing.Point(729, 2);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(75, 23);
+            this.btn_Search.TabIndex = 18;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Serach_Click);
             // 
             // label4
             // 
@@ -117,9 +59,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(356, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 13);
+            this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 17;
-            this.label4.Text = "First Name : ";
+            this.label4.Text = "Last Name : ";
             // 
             // txtLName
             // 
@@ -128,6 +70,7 @@
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(100, 22);
             this.txtLName.TabIndex = 16;
+            this.txtLName.TextChanged += new System.EventHandler(this.txtLName_TextChanged);
             // 
             // label3
             // 
@@ -146,6 +89,7 @@
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Size = new System.Drawing.Size(100, 22);
             this.txtMobileNo.TabIndex = 14;
+            this.txtMobileNo.TextChanged += new System.EventHandler(this.txtMobileNo_TextChanged);
             // 
             // label2
             // 
@@ -164,7 +108,7 @@
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(100, 22);
             this.txtFName.TabIndex = 12;
-            this.txtFName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
             // 
             // label1
             // 
@@ -183,13 +127,38 @@
             this.txtVendorID.Name = "txtVendorID";
             this.txtVendorID.Size = new System.Drawing.Size(86, 22);
             this.txtVendorID.TabIndex = 10;
+            this.txtVendorID.TextChanged += new System.EventHandler(this.txtVendorID_TextChanged);
+            // 
+            // dgVendor
+            // 
+            this.dgVendor.AllowUserToAddRows = false;
+            this.dgVendor.AllowUserToResizeColumns = false;
+            this.dgVendor.AllowUserToResizeRows = false;
+            this.dgVendor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgVendor.BackgroundColor = System.Drawing.Color.White;
+            this.dgVendor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgVendor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select});
+            this.dgVendor.Location = new System.Drawing.Point(4, 41);
+            this.dgVendor.Name = "dgVendor";
+            this.dgVendor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgVendor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgVendor.Size = new System.Drawing.Size(800, 150);
+            this.dgVendor.TabIndex = 19;
+            // 
+            // Select
+            // 
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            this.Select.Visible = false;
             // 
             // ucVendorSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.dgVendor);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtLName);
             this.Controls.Add(this.label3);
@@ -199,7 +168,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtVendorID);
             this.Name = "ucVendorSearch";
-            this.Size = new System.Drawing.Size(810, 207);
+            this.Size = new System.Drawing.Size(810, 201);
             ((System.ComponentModel.ISupportInitialize)(this.dgVendor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,9 +176,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgVendor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtLName;
         private System.Windows.Forms.Label label3;
@@ -218,11 +185,7 @@
         private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtVendorID;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridView dgVendor;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
     }
 }

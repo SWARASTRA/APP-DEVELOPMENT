@@ -24,6 +24,7 @@ namespace ChickenCounter.View
         public bool IsSucessfull { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public int AdminId { get; set; }
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
@@ -35,12 +36,24 @@ namespace ChickenCounter.View
                 {
                     FirstName = _login.FirstName;
                     LastName = _login.LastName;
+                    AdminId = _login.PersonID;
                     this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Incorrect UserName or Password");
                 }
+            }
+        }
+
+        //Used for Development Testing purpose
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txtUserName.Text = "admin";
+                txtPassword.Text = "admin";
+
             }
         }
     }

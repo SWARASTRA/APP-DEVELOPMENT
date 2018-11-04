@@ -13,10 +13,12 @@ namespace ChickenCounter
 {
     public partial class MainView : Form
     {
-        public MainView(string UserName)
+        int LoginAdminId;
+        public MainView(View.LogIn _loginInfo)
         {
             InitializeComponent();
-            lbUserName.Text = UserName;
+            lbUserName.Text = _loginInfo.FirstName + " " + _loginInfo.LastName;
+            LoginAdminId = _loginInfo.AdminId;
             this.WindowState = FormWindowState.Maximized;
         }
 
@@ -31,8 +33,14 @@ namespace ChickenCounter
 
         private void addNewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddVendorForm addVendor = new View.AddVendorForm();
+            AddVendorForm addVendor = new View.AddVendorForm(LoginAdminId);
             addVendor.ShowDialog();
+        }
+
+        private void mToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SellTxnEntry sellEntry = new View.SellTxnEntry();
+            sellEntry.ShowDialog();
         }
     }
 }
