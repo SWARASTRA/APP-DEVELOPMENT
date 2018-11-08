@@ -120,7 +120,7 @@
             // btn_Submit
             // 
             this.btn_Submit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_Submit.Location = new System.Drawing.Point(310, 168);
+            this.btn_Submit.Location = new System.Drawing.Point(323, 173);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(75, 32);
             this.btn_Submit.TabIndex = 8;
@@ -142,7 +142,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txt_Lname, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txt_Fname, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelLastName, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 16);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 21);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));

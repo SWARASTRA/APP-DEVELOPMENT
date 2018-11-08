@@ -16,6 +16,7 @@ namespace ChickenCounter.User_Controls
         {
             InitializeComponent();
             ValidateSearchOption();
+            dgVendor.Visible = false;
         }
 
         private void ValidateSearchOption()
@@ -61,10 +62,23 @@ namespace ChickenCounter.User_Controls
           
         private void btn_Serach_Click(object sender, EventArgs e)
         {
-            List<Model.Vendor> Vendor = VendorSearch(txtFName.Text);
+            List<Model.Vendor> Vendor = null;
+            if (txtVendorID.Text!="")
+            {
+                Vendor = VendorSearch(int.Parse(txtVendorID.Text));
+            }
+            else
+                Vendor = VendorSearch(txtFName.Text);
 
-            if(Vendor.Count != 0)
+
+            if (Vendor.Count != 0)
+            {
+                dgVendor.Visible = true;
                 dgVendor.DataSource = Vendor;
+            }
+            else
+                dgVendor.Visible = false;
+
         }
 
         private List<Model.Vendor> VendorSearch(int VendorId)
@@ -116,6 +130,27 @@ namespace ChickenCounter.User_Controls
         private void txtMobileNo_TextChanged(object sender, EventArgs e)
         {
             ValidateSearchOption();
+        }
+
+        private void txtVendorID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
+        }
+
+        private void txtFName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar) || char.IsLetter(e.KeyChar))
+            {
+                return;
+            }
+            e.Handled = true;
+        }
+
+        private void txtMobileNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
         }
     }
 }

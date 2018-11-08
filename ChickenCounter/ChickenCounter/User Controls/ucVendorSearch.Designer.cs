@@ -71,6 +71,7 @@
             this.txtLName.Size = new System.Drawing.Size(100, 22);
             this.txtLName.TabIndex = 16;
             this.txtLName.TextChanged += new System.EventHandler(this.txtLName_TextChanged);
+            this.txtLName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFName_KeyPress);
             // 
             // label3
             // 
@@ -90,6 +91,7 @@
             this.txtMobileNo.Size = new System.Drawing.Size(100, 22);
             this.txtMobileNo.TabIndex = 14;
             this.txtMobileNo.TextChanged += new System.EventHandler(this.txtMobileNo_TextChanged);
+            this.txtMobileNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobileNo_KeyPress);
             // 
             // label2
             // 
@@ -109,6 +111,7 @@
             this.txtFName.Size = new System.Drawing.Size(100, 22);
             this.txtFName.TabIndex = 12;
             this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
+            this.txtFName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFName_KeyPress);
             // 
             // label1
             // 
@@ -124,10 +127,12 @@
             // 
             this.txtVendorID.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
             this.txtVendorID.Location = new System.Drawing.Point(73, 4);
+            this.txtVendorID.MaxLength = 6;
             this.txtVendorID.Name = "txtVendorID";
             this.txtVendorID.Size = new System.Drawing.Size(86, 22);
             this.txtVendorID.TabIndex = 10;
             this.txtVendorID.TextChanged += new System.EventHandler(this.txtVendorID_TextChanged);
+            this.txtVendorID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVendorID_KeyPress);
             // 
             // dgVendor
             // 
@@ -140,7 +145,9 @@
             this.dgVendor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Select});
             this.dgVendor.Location = new System.Drawing.Point(4, 41);
+            this.dgVendor.MultiSelect = false;
             this.dgVendor.Name = "dgVendor";
+            this.dgVendor.ReadOnly = true;
             this.dgVendor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgVendor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgVendor.Size = new System.Drawing.Size(800, 150);
@@ -150,6 +157,7 @@
             // 
             this.Select.HeaderText = "Select";
             this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
             this.Select.Visible = false;
             // 
             // ucVendorSearch

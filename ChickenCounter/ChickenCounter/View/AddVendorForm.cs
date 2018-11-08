@@ -111,7 +111,7 @@ namespace ChickenCounter.View
             bool IsSusess = int.TryParse(txt_CrdtLmt.Text, out Crdt_Limit);
             if(!IsSusess)
             {
-                ErrorMessages += "- Credit Limit Can not be a Letter \r\n";
+                ErrorMessages += "- Credit Limit Can not be Blank or Letter \r\n";
                 return false;
             }
             if (IsSusess && Crdt_Limit > 25000)
@@ -133,7 +133,7 @@ namespace ChickenCounter.View
                 }
                 else
                 {
-                    ErrorMessages += "- Vendor is Already Exists \r\n";
+                    ErrorMessages += "- Vendor is Already Exists on this Mobile Number\r\n";
                     return true;
                 }
             }

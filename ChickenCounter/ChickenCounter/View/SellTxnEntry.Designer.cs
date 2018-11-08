@@ -39,7 +39,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(927, 238);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(839, 237);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // ucVendorSearch1
@@ -47,16 +47,20 @@
             this.ucVendorSearch1.AutoSize = true;
             this.ucVendorSearch1.Location = new System.Drawing.Point(3, 3);
             this.ucVendorSearch1.Name = "ucVendorSearch1";
-            this.ucVendorSearch1.Size = new System.Drawing.Size(807, 194);
+            this.ucVendorSearch1.Size = new System.Drawing.Size(807, 29);
             this.ucVendorSearch1.TabIndex = 0;
             // 
             // SellTxnEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 238);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(839, 237);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.MaximumSize = new System.Drawing.Size(855, 276);
+            this.MinimumSize = new System.Drawing.Size(855, 276);
             this.Name = "SellTxnEntry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sell Entry";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
