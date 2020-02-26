@@ -1,4 +1,5 @@
-﻿using ChickenCounter.View;
+﻿using ChickenCounter.Utils;
+using ChickenCounter.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,8 +40,18 @@ namespace ChickenCounter
 
         private void mToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SellTxnEntry sellEntry = new View.SellTxnEntry();
+            SellTxnEntry sellEntry = new View.SellTxnEntry(LoginAdminId);
             sellEntry.ShowDialog();
+        }
+
+        private void setPriceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Set_Price sp = new Set_Price(LoginAdminId);
+            sp.ShowDialog();
+        }
+
+        private void editToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

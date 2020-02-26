@@ -28,5 +28,7 @@ namespace ChickenCounter
         public virtual DbSet<Login> Logins { get; set; }
         public virtual DbSet<Vendor> Vendors { get; set; }
         public virtual DbSet<VendorTransaction> VendorTransactions { get; set; }
+        public virtual DbSet<LOOKUP_VALUE> LOOKUP_VALUE { get; set; }
+        public virtual DbSet<LOOKUP_CODE> LOOKUP_CODE { get; set; }
     }
 }

@@ -60,6 +60,13 @@
     <Compile Include="Login.cs">
       <DependentUpon>MyShopDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="LOOKUP_CODE.cs">
+      <DependentUpon>MyShopDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOOKUP_VALUE.cs">
+      <DependentUpon>MyShopDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Master.cs" />
     <Compile Include="Model\Vendor.cs" />
     <Compile Include="MyShopDB.Context.cs">
       <AutoGen>True</AutoGen>
@@ -76,11 +83,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyShopDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\ucSellEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucSellEntry.Designer.cs">
+      <DependentUpon>ucSellEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\ucVendorSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Controls\ucVendorSearch.Designer.cs">
       <DependentUpon>ucVendorSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Set Price.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\Set Price.Designer.cs">
+      <DependentUpon>Set Price.cs</DependentUpon>
     </Compile>
     <Compile Include="Vendor.cs">
       <DependentUpon>MyShopDB.tt</DependentUpon>
@@ -120,8 +139,14 @@
     <Compile Include="View\SellTxnEntry.Designer.cs">
       <DependentUpon>SellTxnEntry.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="User Controls\ucSellEntry.resx">
+      <DependentUpon>ucSellEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\ucVendorSearch.resx">
       <DependentUpon>ucVendorSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\Set Price.resx">
+      <DependentUpon>Set Price.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddVendorForm.resx">
       <DependentUpon>AddVendorForm.cs</DependentUpon>
@@ -132,15 +157,6 @@
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="User Controls\ucPurchaseTxn.resx">
       <DependentUpon>ucPurchaseTxn.cs</DependentUpon>
     </EmbeddedResource>

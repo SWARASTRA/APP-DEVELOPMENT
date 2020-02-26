@@ -28,49 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucVendorSearch1 = new ChickenCounter.User_Controls.ucVendorSearch();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.lb_adminID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ucSellEntry = new ChickenCounter.User_Controls.ucSellEntry();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // lb_adminID
             // 
-            this.flowLayoutPanel1.Controls.Add(this.ucVendorSearch1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(839, 237);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.lb_adminID.AutoSize = true;
+            this.lb_adminID.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lb_adminID.ForeColor = System.Drawing.Color.Red;
+            this.lb_adminID.Location = new System.Drawing.Point(408, 6);
+            this.lb_adminID.Name = "lb_adminID";
+            this.lb_adminID.Size = new System.Drawing.Size(68, 19);
+            this.lb_adminID.TabIndex = 17;
+            this.lb_adminID.Text = "_adminID";
             // 
-            // ucVendorSearch1
+            // label1
             // 
-            this.ucVendorSearch1.AutoSize = true;
-            this.ucVendorSearch1.Location = new System.Drawing.Point(3, 3);
-            this.ucVendorSearch1.Name = "ucVendorSearch1";
-            this.ucVendorSearch1.Size = new System.Drawing.Size(807, 29);
-            this.ucVendorSearch1.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(335, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Admin ID : ";
+            // 
+            // ucSellEntry1
+            // 
+            this.ucSellEntry.Location = new System.Drawing.Point(6, 28);
+            this.ucSellEntry.Name = "ucSellEntry";
+            this.ucSellEntry.Size = new System.Drawing.Size(508, 345);
+            this.ucSellEntry.TabIndex = 18;
             // 
             // SellTxnEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(839, 237);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.MaximumSize = new System.Drawing.Size(855, 276);
-            this.MinimumSize = new System.Drawing.Size(855, 276);
+            this.ClientSize = new System.Drawing.Size(520, 386);
+            this.Controls.Add(this.ucSellEntry);
+            this.Controls.Add(this.lb_adminID);
+            this.Controls.Add(this.label1);
             this.Name = "SellTxnEntry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sell Entry";
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private User_Controls.ucVendorSearch ucVendorSearch1;
+        private System.Windows.Forms.Label lb_adminID;
+        private System.Windows.Forms.Label label1;
+        private User_Controls.ucSellEntry ucSellEntry;
     }
 }

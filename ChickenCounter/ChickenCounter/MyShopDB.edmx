@@ -10,21 +10,56 @@
             <PropertyRef Name="PersonID" />
           </Key>
           <Property Name="PersonID" Type="int" Nullable="false" />
-          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Created_By" Type="varchar" MaxLength="500" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'myshopdb.dbo.LOOKUP_CODE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="LOOKUP_CODE">
+          <Key>
+            <PropertyRef Name="SL.NO" />
+          </Key>
+          <Property Name="SL.NO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LOOKUP_CODE" Type="int" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="500" />
+          <Property Name="CREATED_ON" Type="datetime" />
+          <Property Name="CREATED_BY" Type="varchar" MaxLength="500" />
+          <Property Name="MODIFIED_ON" Type="datetime" />
+          <Property Name="MODIFIED_BY" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="LOOKUP_VALUE">
+          <Key>
+            <PropertyRef Name="SL.NO" />
+          </Key>
+          <Property Name="SL.NO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LOOKUP_CODE_ID" Type="int" />
+          <Property Name="LOOKUP_VALUE_ID" Type="int" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="500" />
+          <Property Name="CREATED_ON" Type="datetime" />
+          <Property Name="CREATED_BY" Type="varchar" MaxLength="500" />
+          <Property Name="MODIFIED_ON" Type="datetime" />
+          <Property Name="MODIFIED_BY" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Vendor">
           <Key>
             <PropertyRef Name="VendorID" />
           </Key>
-          <Property Name="VendorID" Type="int" Nullable="false" />
-          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VendorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
           <Property Name="MobileNo" Type="varchar" MaxLength="15" />
-          <Property Name="CreditLimit" Type="int" Nullable="false" />
+          <Property Name="CreditLimit" Type="int" />
           <Property Name="AdminID" Type="int" />
+          <Property Name="Created_On" Type="datetime" />
+          <Property Name="Created_By" Type="varchar" MaxLength="500" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="Modified_By" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="VendorTransaction">
           <Key>
@@ -78,8 +113,20 @@
         </Association>
         <EntityContainer Name="MyShopDB_ModelStoreContainer">
           <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOOKUP_VALUE" EntityType="Self.LOOKUP_VALUE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vendor" EntityType="Self.Vendor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VendorTransaction" EntityType="Self.VendorTransaction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOOKUP_CODE" EntityType="Self.LOOKUP_CODE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LOOKUP_CODE].[SL.NO] AS [SL.NO], 
+    [LOOKUP_CODE].[LOOKUP_CODE] AS [LOOKUP_CODE], 
+    [LOOKUP_CODE].[DESCRIPTION] AS [DESCRIPTION], 
+    [LOOKUP_CODE].[CREATED_ON] AS [CREATED_ON], 
+    [LOOKUP_CODE].[CREATED_BY] AS [CREATED_BY], 
+    [LOOKUP_CODE].[MODIFIED_ON] AS [MODIFIED_ON], 
+    [LOOKUP_CODE].[MODIFIED_BY] AS [MODIFIED_BY]
+    FROM [dbo].[LOOKUP_CODE] AS [LOOKUP_CODE]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_Vendor_Login" Association="Self.FK_Vendor_Login">
             <End Role="Login" EntitySet="Login" />
             <End Role="Vendor" EntitySet="Vendor" />
@@ -102,25 +149,33 @@
             <PropertyRef Name="PersonID" />
           </Key>
           <Property Name="PersonID" Type="Int32" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Vendors" Relationship="Self.FK_Vendor_Login" FromRole="Login" ToRole="Vendor" />
           <NavigationProperty Name="VendorTransactions" Relationship="Self.FK_VendorTransaction_Login" FromRole="Login" ToRole="VendorTransaction" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Created_By" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="Vendor">
           <Key>
             <PropertyRef Name="VendorID" />
           </Key>
           <Property Name="VendorID" Type="Int32" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="CreditLimit" Type="Int32" Nullable="false" />
+          <Property Name="CreditLimit" Type="Int32"/>
           <Property Name="AdminID" Type="Int32" />
           <NavigationProperty Name="Login" Relationship="Self.FK_Vendor_Login" FromRole="Vendor" ToRole="Login" />
           <NavigationProperty Name="VendorTransaction" Relationship="Self.FK_VendorTransaction_Vendor" FromRole="Vendor" ToRole="VendorTransaction" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+          <Property Name="Created_By" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="VendorTransaction">
           <Key>
@@ -190,7 +245,34 @@
             <End Role="Vendor" EntitySet="Vendors" />
             <End Role="VendorTransaction" EntitySet="VendorTransactions" />
           </AssociationSet>
+          <EntitySet Name="LOOKUP_VALUE" EntityType="MyShopDB_Model.LOOKUP_VALUE" />
+          <EntitySet Name="LOOKUP_CODE" EntityType="MyShopDB_Model.LOOKUP_CODE" />
         </EntityContainer>
+        <EntityType Name="LOOKUP_VALUE">
+          <Key>
+            <PropertyRef Name="SL_NO" />
+          </Key>
+          <Property Name="SL_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LOOKUP_CODE_ID" Type="Int32" />
+          <Property Name="LOOKUP_VALUE_ID" Type="Int32" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CREATED_ON" Type="DateTime" Precision="3" />
+          <Property Name="CREATED_BY" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFIED_ON" Type="DateTime" Precision="3" />
+          <Property Name="MODIFIED_BY" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LOOKUP_CODE">
+          <Key>
+            <PropertyRef Name="SL_NO" />
+          </Key>
+          <Property Name="SL_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LOOKUP_CODE1" Type="Int32" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CREATED_ON" Type="DateTime" Precision="3" />
+          <Property Name="CREATED_BY" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFIED_ON" Type="DateTime" Precision="3" />
+          <Property Name="MODIFIED_BY" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -200,6 +282,10 @@
           <EntitySetMapping Name="Logins">
             <EntityTypeMapping TypeName="MyShopDB_Model.Login">
               <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
                 <ScalarProperty Name="PersonID" ColumnName="PersonID" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -211,6 +297,10 @@
           <EntitySetMapping Name="Vendors">
             <EntityTypeMapping TypeName="MyShopDB_Model.Vendor">
               <MappingFragment StoreEntitySet="Vendor">
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
                 <ScalarProperty Name="VendorID" ColumnName="VendorID" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -235,6 +325,33 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="LOOKUP_VALUE">
+            <EntityTypeMapping TypeName="MyShopDB_Model.LOOKUP_VALUE">
+              <MappingFragment StoreEntitySet="LOOKUP_VALUE">
+                <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+                <ScalarProperty Name="MODIFIED_ON" ColumnName="MODIFIED_ON" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="LOOKUP_VALUE_ID" ColumnName="LOOKUP_VALUE_ID" />
+                <ScalarProperty Name="LOOKUP_CODE_ID" ColumnName="LOOKUP_CODE_ID" />
+                <ScalarProperty Name="SL_NO" ColumnName="SL.NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOOKUP_CODE">
+            <EntityTypeMapping TypeName="MyShopDB_Model.LOOKUP_CODE">
+              <MappingFragment StoreEntitySet="LOOKUP_CODE">
+                <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+                <ScalarProperty Name="MODIFIED_ON" ColumnName="MODIFIED_ON" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="LOOKUP_CODE1" ColumnName="LOOKUP_CODE" />
+                <ScalarProperty Name="SL_NO" ColumnName="SL.NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -249,8 +366,8 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

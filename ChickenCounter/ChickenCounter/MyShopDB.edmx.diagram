@@ -11,6 +11,8 @@
         <AssociationConnector Association="MyShopDB_Model.FK_Vendor_Login" ManuallyRouted="false" />
         <AssociationConnector Association="MyShopDB_Model.FK_VendorTransaction_Login" ManuallyRouted="false" />
         <AssociationConnector Association="MyShopDB_Model.FK_VendorTransaction_Vendor" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MyShopDB_Model.LOOKUP_VALUE" Width="1.75" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="MyShopDB_Model.LOOKUP_CODE" Width="1.5" PointX="0.75" PointY="5.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

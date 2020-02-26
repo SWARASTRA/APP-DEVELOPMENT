@@ -47,6 +47,7 @@
             this.monthlyReportToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.monthlyReportToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setPriceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -115,20 +116,21 @@
             // addNewToolStripMenuItem
             // 
             this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
-            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.addNewToolStripMenuItem.Text = "Add New";
             this.addNewToolStripMenuItem.Click += new System.EventHandler(this.addNewToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem1
             // 
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(148, 26);
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
             this.editToolStripMenuItem1.Text = "Edit";
+            this.editToolStripMenuItem1.Click += new System.EventHandler(this.editToolStripMenuItem1_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // viewToolStripMenuItem
@@ -147,7 +149,7 @@
             this.weeklyReportToolStripMenuItem,
             this.monthlyReportToolStripMenuItem1});
             this.dailyReportToolStripMenuItem.Name = "dailyReportToolStripMenuItem";
-            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.dailyReportToolStripMenuItem.Text = "Purchase";
             // 
             // dailyReportToolStripMenuItem1
@@ -175,7 +177,7 @@
             this.monthlyReportToolStripMenuItem2,
             this.monthlyReportToolStripMenuItem3});
             this.monthlyReportToolStripMenuItem.Name = "monthlyReportToolStripMenuItem";
-            this.monthlyReportToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.monthlyReportToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.monthlyReportToolStripMenuItem.Text = "Sell";
             // 
             // dailyReportToolStripMenuItem2
@@ -198,9 +200,18 @@
             // 
             // settingToolStripMenuItem
             // 
+            this.settingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setPriceToolStripMenuItem});
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
-            this.settingToolStripMenuItem.Text = "Setting";
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
+            this.settingToolStripMenuItem.Text = "Settings";
+            // 
+            // setPriceToolStripMenuItem
+            // 
+            this.setPriceToolStripMenuItem.Name = "setPriceToolStripMenuItem";
+            this.setPriceToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.setPriceToolStripMenuItem.Text = "Set Price";
+            this.setPriceToolStripMenuItem.Click += new System.EventHandler(this.setPriceToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -313,6 +324,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbUserName;
+        private System.Windows.Forms.ToolStripMenuItem setPriceToolStripMenuItem;
     }
 }
 

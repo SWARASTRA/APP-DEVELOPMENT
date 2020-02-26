@@ -15,10 +15,8 @@ namespace ChickenCounter.View
         public LogIn()
         {
             InitializeComponent();
-            if(txtUserName.Text !=string.Empty && txtPassword.Text!=string.Empty)
-            {
-                btnSignIn.Enabled = true;
-            }
+            //txtPassword.Enabled = false;
+            //btnSignIn.Enabled = false;
         }
 
         public bool IsSucessfull { get; set; }
@@ -53,8 +51,15 @@ namespace ChickenCounter.View
             {
                 txtUserName.Text = "admin";
                 txtPassword.Text = "admin";
-
             }
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

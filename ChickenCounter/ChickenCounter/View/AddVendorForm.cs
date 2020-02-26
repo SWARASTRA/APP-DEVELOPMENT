@@ -35,7 +35,6 @@ namespace ChickenCounter.View
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-
             Vendor ven = GetValidVendor();
             if(ven != null)
                 AddVendor(ven);
@@ -55,17 +54,17 @@ namespace ChickenCounter.View
                 IsSuccessfulAdd = true;
             }
         }
-        private int GenerateVendorID()
-        {
-            int Old_id;
-            using (MyShopDB_Entities mse = new MyShopDB_Entities())
-            {
-                Old_id = mse.Vendors.Max(x => (int)x.VendorID);
-            }
-            int New_Id = Old_id + 1;
+        //private int GenerateVendorID()
+        //{
+        //    int Old_id;
+        //    using (MyShopDB_Entities mse = new MyShopDB_Entities())
+        //    {
+        //        Old_id = mse.Vendors.Max(x => (int)x.VendorID);
+        //    }
+        //    int New_Id = Old_id + 1;
 
-            return New_Id;
-        }
+        //    return New_Id;
+        //}
         private Vendor GetValidVendor()
         {
             ErrorMessages = string.Empty;
@@ -99,8 +98,7 @@ namespace ChickenCounter.View
                 MessageBox.Show(ErrorMessages, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                int NewVendorId = GenerateVendorID();
-                _vendor= new Vendor { VendorID = NewVendorId, FirstName = txt_Fname.Text.ToUpper(), LastName = txt_Lname.Text.ToUpper(), CreditLimit = int.Parse(txt_CrdtLmt.Text), MobileNo = txt_Mno.Text, AdminID = AdminID };
+                _vendor= new Vendor { FirstName = txt_Fname.Text.ToUpper(), LastName = txt_Lname.Text.ToUpper(), CreditLimit = int.Parse(txt_CrdtLmt.Text), MobileNo = txt_Mno.Text, AdminID = AdminID, Created_By= GetNamebyID(AdminID), Created_On=DateTime.Now };
             }
             return _vendor;
         }
@@ -137,6 +135,18 @@ namespace ChickenCounter.View
                     return true;
                 }
             }
+        }
+        private string GetNamebyID(int id)
+        {
+            string name = string.Empty;
+            using (MyShopDB_Entities mse = new MyShopDB_Entities())
+            {
+                string fname = mse.Logins.Where(a => a.PersonID == id).Select(a => a.FirstName).FirstOrDefault();
+                string lname = mse.Logins.Where(a => a.PersonID == id).Select(a => a.LastName).FirstOrDefault();
+
+                name = fname + " " + lname;
+            } 
+            return name;
         }
     }
 }

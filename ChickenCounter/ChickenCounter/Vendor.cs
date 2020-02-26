@@ -20,6 +20,10 @@ namespace ChickenCounter
         public string MobileNo { get; set; }
         public int CreditLimit { get; set; }
         public Nullable<int> AdminID { get; set; }
+        public Nullable<System.DateTime> Created_On { get; set; }
+        public string Created_By { get; set; }
+        public Nullable<System.DateTime> Modified_On { get; set; }
+        public string Modified_By { get; set; }
     
         public virtual Login Login { get; set; }
         public virtual VendorTransaction VendorTransaction { get; set; }
